@@ -1,0 +1,15 @@
+{
+  "name": "bulbutin",
+  "version": "0.0.1",
+  "description": "Bulbutin app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lonny Gomes",
+  "license": "ISC",
+  "workspaces": [
+    "packages/bulbutin-vue-app",
+    "packages/parse-photos"
+  ]
+}
