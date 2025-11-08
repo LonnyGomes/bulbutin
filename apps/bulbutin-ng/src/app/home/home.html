@@ -1,7 +1,10 @@
 <div class="layout">
   <app-navbar></app-navbar>
   <div class="content">
-    <p>home works!</p>
+    @for (image of images(); track image.image) {
+      <app-image-card [image]="image"></app-image-card>
+    }
   </div>
   <app-toolbar></app-toolbar>
 </div>
+

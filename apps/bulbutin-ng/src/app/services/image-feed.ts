@@ -1,14 +1,15 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { ImageModel } from '../models/image.model';
-import imageData from '../../assets/data/images.json';
+import imageData from '../../../public/assets/data/images.json';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ImageFeed {
-  getImages(): ImageModel[] {
-    console.log('Fetching image data...');
+  private rawImages = (imageData as ImageModel[]).map((curImg) => ({
+    ...curImg,
+    image: `assets/images/${curImg.image}`,
+  }));
 
-    return imageData as ImageModel[];
-  }
+  readonly images = signal<ImageModel[]>(this.rawImages);
 }
