@@ -19,7 +19,7 @@ export class Map implements OnInit, OnDestroy {
 
     this.map = new mapboxgl.Map({
       container: this.mapContainer().nativeElement,
-      style: 'mapbox://styles/mapbox/streets-v12',
+      style: 'mapbox://styles/uknowho/cmhq41w0s009101s54ierbhb1',
       center: [-77.0369, 38.9072], // Default center (Washington DC)
       zoom: 9,
     });
