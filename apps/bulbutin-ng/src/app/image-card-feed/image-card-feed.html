@@ -1,1 +1,3 @@
-<p>image-card-feed works!</p>
+@for (image of images(); track image.image) {
+<app-image-card [image]="image"></app-image-card>
+}
