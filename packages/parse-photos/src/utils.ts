@@ -1,13 +1,14 @@
 import path from "node:path";
 import fs from "node:fs/promises";
 import exifr from "exifr";
-import type {
-  ImageResult,
-  ImageDataResults,
-  CountryInfo,
-  AltitudeStats,
-} from "./models";
-import { geocode, initGeocoder } from "./geocoder";
+import type { ImageResult, ImageDataResults } from "./models.js";
+import { geocode, initGeocoder } from "./geocoder.js";
+import {
+  calcTotalCountries,
+  calcAltitudes,
+  calcTotalUSStates,
+  genGeoJSONPoints,
+} from "./shared.js";
 
 export async function extractMetadata(
   imagePath: string,
@@ -42,6 +43,12 @@ export async function extractMetadata(
     distance: geoDistance,
   } = await geocode(longitude, latitude);
 
+  // generate formatted name based on if US or not
+  const formattedName =
+    countryCode === "US"
+      ? `${geoName}, ${adminName1}`
+      : `${geoName}, ${countryName}`;
+
   return {
     image,
     altitude: GPSAltitude ? metersToFeet(GPSAltitude) : undefined,
@@ -52,6 +59,7 @@ export async function extractMetadata(
     latitude,
     longitude,
     geoName,
+    formattedName,
     countryCode,
     countryName,
     flag,
@@ -100,66 +108,6 @@ function haversineDistance(
   return kmsToMiles(d);
 }
 
-export function calcTotalCountries(images: ImageResult[]): CountryInfo[] {
-  const totalCountries = images.reduce(
-    (countryHash, curImage) => {
-      const { countryCode, flag, countryName } = curImage;
-
-      if (!countryHash[countryCode]) {
-        countryHash[countryCode] = {
-          countryCode,
-          countryName,
-          flag,
-        };
-      }
-
-      return countryHash;
-    },
-    {} as Record<string, CountryInfo>,
-  );
-
-  return Object.values(totalCountries);
-}
-
-export function calcTotalUSStates(images: ImageResult[]): string[] {
-  const totalStates = images
-    .filter((curImage) => curImage.countryCode === "US")
-    .map((curImage) => curImage.adminName1);
-
-  return [...new Set(totalStates)];
-}
-
-export function calcAltitudes(images: ImageResult[]): AltitudeStats {
-  const altitudeStats = {
-    min: Number.POSITIVE_INFINITY,
-    max: Number.NEGATIVE_INFINITY,
-    total: 0,
-    count: 0,
-  };
-
-  images.reduce((stats, curImage) => {
-    const { altitude } = curImage;
-    if (altitude !== undefined) {
-      stats.count += 1;
-      stats.total += altitude;
-      stats.min = Math.min(stats.min, altitude);
-      stats.max = Math.max(stats.max, altitude);
-    }
-    return stats;
-  }, altitudeStats);
-
-  const average =
-    altitudeStats.count > 0
-      ? Math.round(altitudeStats.total / altitudeStats.count)
-      : 0;
-
-  return {
-    min: altitudeStats.min,
-    max: altitudeStats.max,
-    average,
-  };
-}
-
 export async function processImages(
   basePath: string,
   homeCoords: readonly [lon: number, lat: number],
@@ -183,11 +131,13 @@ export async function processImages(
   const countryTotals = calcTotalCountries(results);
   const usTotals = calcTotalUSStates(results);
   const altitudeStats = calcAltitudes(results);
+  const imagesPoints = genGeoJSONPoints(results);
 
   return {
     altitudeStats,
     countryTotals,
     images,
     usTotals,
+    imagesPoints,
   };
 }

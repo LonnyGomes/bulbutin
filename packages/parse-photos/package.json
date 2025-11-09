@@ -2,8 +2,31 @@
   "name": "parse-photos",
   "version": "0.0.1",
   "description": "Parse images",
-  "main": "dist/index.js",
+  "main": "dist/lib.js",
+  "types": "dist/lib.d.ts",
   "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/lib.d.ts",
+      "import": "./dist/lib.js"
+    },
+    "./types": {
+      "types": "./dist/models.d.ts",
+      "import": "./dist/models.js"
+    },
+    "./data": {
+      "types": "./dist/data.d.ts",
+      "import": "./dist/data.js"
+    },
+    "./shared": {
+      "types": "./dist/shared.d.ts",
+      "import": "./dist/shared.js"
+    }
+  },
+  "files": [
+    "dist",
+    "images.json"
+  ],
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
@@ -20,6 +43,7 @@
     "local-reverse-geocoder": "^0.16.7"
   },
   "devDependencies": {
+    "@types/geojson": "^7946.0.16",
     "@types/node": "^24.10.0",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3"

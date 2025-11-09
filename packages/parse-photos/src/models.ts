@@ -1,3 +1,5 @@
+import type { FeatureCollection } from "geojson";
+
 export interface ImageResult {
   image: string;
   altitude?: number;
@@ -8,6 +10,7 @@ export interface ImageResult {
   latitude: number;
   longitude: number;
   geoName: string;
+  formattedName: string;
   countryCode: string;
   countryName: string;
   flag: string;
@@ -33,5 +36,6 @@ export interface ImageDataResults {
   altitudeStats: AltitudeStats;
   countryTotals: CountryInfo[];
   images: ImageResult[];
+  imagesPoints: FeatureCollection;
   usTotals: string[];
 }
