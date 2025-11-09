@@ -1,7 +1,13 @@
 import path from "node:path";
+import fs from "node:fs/promises";
 import exifr from "exifr";
-import type { ImageResult, CountryInfo } from "./models";
-import { geocode } from "./geocoder";
+import type {
+  ImageResult,
+  ImageDataResults,
+  CountryInfo,
+  AltitudeStats,
+} from "./models";
+import { geocode, initGeocoder } from "./geocoder";
 
 export async function extractMetadata(
   imagePath: string,
@@ -69,7 +75,7 @@ export async function extractMetadata(
  * @param lat2 Latitude of second point in decimal degrees
  * @returns Distance in mile
  */
-export function haversineDistance(
+function haversineDistance(
   lon1: number,
   lat1: number,
   lon2: number,
@@ -123,7 +129,7 @@ export function calcTotalUSStates(images: ImageResult[]): string[] {
   return [...new Set(totalStates)];
 }
 
-export function calcAltitudes(images: ImageResult[]) {
+export function calcAltitudes(images: ImageResult[]): AltitudeStats {
   const altitudeStats = {
     min: Number.POSITIVE_INFINITY,
     max: Number.NEGATIVE_INFINITY,
@@ -151,5 +157,37 @@ export function calcAltitudes(images: ImageResult[]) {
     min: altitudeStats.min,
     max: altitudeStats.max,
     average,
+  };
+}
+
+export async function processImages(
+  basePath: string,
+  homeCoords: readonly [lon: number, lat: number],
+): Promise<ImageDataResults> {
+  await initGeocoder();
+  const files = await fs.readdir(basePath);
+  const extentions = [".jpg", ".jpeg", ".png", ".tiff", ".heic"];
+  const imageFiles = files.filter((file) =>
+    extentions.includes(path.extname(file).toLowerCase()),
+  );
+  const promises = imageFiles.map(async (image) => {
+    const imagePath = path.join(basePath, image);
+    const metadata = await extractMetadata(imagePath, homeCoords);
+    return metadata;
+  });
+
+  const results = await Promise.all(promises);
+  const images = results.sort(
+    (a, b) => b.timestamp.getTime() - a.timestamp.getTime(),
+  );
+  const countryTotals = calcTotalCountries(results);
+  const usTotals = calcTotalUSStates(results);
+  const altitudeStats = calcAltitudes(results);
+
+  return {
+    altitudeStats,
+    countryTotals,
+    images,
+    usTotals,
   };
 }

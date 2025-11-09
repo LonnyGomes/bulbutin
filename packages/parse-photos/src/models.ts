@@ -22,3 +22,16 @@ export interface CountryInfo {
   countryName: string;
   flag: string;
 }
+
+export interface AltitudeStats {
+  min: number;
+  max: number;
+  average: number;
+}
+
+export interface ImageDataResults {
+  altitudeStats: AltitudeStats;
+  countryTotals: CountryInfo[];
+  images: ImageResult[];
+  usTotals: string[];
+}
