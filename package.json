@@ -4,7 +4,9 @@
   "description": "Bulbutin app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ng": "cd apps/bulbutin-ng/ && ng build bulbutin-ng",
+    "deploy:ng": "npm run build:ng && rm -rf dist && mkdir -p dist && cp -r apps/bulbutin-ng/dist/bulbutin-ng/browser/* dist/"
   },
   "author": "Lonny Gomes",
   "license": "ISC",
