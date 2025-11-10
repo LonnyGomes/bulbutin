@@ -12,6 +12,7 @@
   "license": "ISC",
   "workspaces": [
     "packages/bulbutin-vue-app",
-    "packages/parse-photos"
+    "packages/parse-photos",
+    "apps/*"
   ]
 }
