@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:parse": "cd packages/parse-photos/ && npm run build",
-    "build:ng": "cd apps/bulbutin-ng/ && ng build bulbutin-ng",
+    "build:ng": "cd apps/bulbutin-ng/ && ng build -c production",
     "deploy:ng": "npm run build:ng && rm -rf dist && mkdir -p dist && cp -r apps/bulbutin-ng/dist/bulbutin-ng/browser/* dist/",
     "postinstall": "npm run build:parse"
   },

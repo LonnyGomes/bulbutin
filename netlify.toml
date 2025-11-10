@@ -1,0 +1,16 @@
+[build]
+  # Base directory for the build
+  base = "apps/bulbutin-ng"
+
+  # Build command
+  command = "npm run build"
+
+  # Directory with the static files
+  publish = "dist/bulbutin-ng/browser"
+
+[build.environment]
+  # Node version
+  NODE_VERSION = "22"
+
+# Make environment variables available to Angular at build time
+# Note: You still need to set MAPBOX_ACCESS_TOKEN in Netlify's dashboard

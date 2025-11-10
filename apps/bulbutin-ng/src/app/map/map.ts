@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy, ElementRef, viewChild, inject } from '@angular/core';
 import mapboxgl from 'mapbox-gl';
-import { environment } from '../../environments/environment.local';
+import { environment } from '../../environments/environment';
 import { ImageFeed } from '../services/image-feed';
 
 @Component({
