@@ -17,6 +17,7 @@ export const environment = {
 ```
 
 3. The `environment.local.ts` file is in `.gitignore` and won't be committed
+4. Run `npm start` - the app will use your local token
 
 ### Production Deployment (Netlify)
 
@@ -30,12 +31,17 @@ The production build will automatically use this environment variable.
 
 ### Environment Files
 
-- `environment.local.ts` - Your local token (git-ignored, not committed)
-- `environment.ts` - Default/fallback (committed)
-- `environment.development.ts` - Development config, imports from local (committed)
-- `environment.prod.ts` - Production config, reads from `process.env` (committed)
+- `environment.local.ts` - Your local token (git-ignored, only for development)
+- `environment.ts` - Production config, reads from `process.env` (committed)
+- `environment.development.ts` - Development config, imports from `environment.local.ts` (committed)
 
 ### How It Works
 
-- **Development** (`ng serve`): Uses `environment.development.ts` → imports `environment.local.ts`
-- **Production** (`ng build`): Uses `environment.prod.ts` → reads from Netlify environment variables
+- **Development** (`npm start` or `ng serve`): 
+  - Uses `environment.development.ts` 
+  - Imports your local token from `environment.local.ts`
+  
+- **Production** (`npm run build` or `ng build`): 
+  - Uses `environment.ts` (default)
+  - Reads `MAPBOX_ACCESS_TOKEN` from Netlify environment variables
+  - Never tries to import `environment.local.ts`
