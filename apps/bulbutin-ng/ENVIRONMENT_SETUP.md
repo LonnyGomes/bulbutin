@@ -6,8 +6,17 @@ This project uses Mapbox for map visualization. Different environment files are 
 
 ### Local Development Setup
 
-1. Get a free Mapbox access token from [mapbox.com](https://www.mapbox.com/)
-2. Edit `src/environments/environment.local.ts` and add your token:
+1. **Clone and install**: 
+   ```bash
+   git clone <repo-url>
+   cd bulbutin/apps/bulbutin-ng
+   npm install
+   ```
+   The post-install script automatically configures git to ignore local changes to `environment.local.ts`.
+
+2. Get a free Mapbox access token from [mapbox.com](https://www.mapbox.com/)
+
+3. Edit `src/environments/environment.local.ts` and add your token:
 
 ```typescript
 export const environment = {
@@ -16,8 +25,9 @@ export const environment = {
 };
 ```
 
-3. **⚠️ Important**: Do NOT commit your actual token to git! The file has an empty token by default.
 4. Run `npm start` - the app will use your local token
+
+> **Note**: The `npm install` post-install hook runs `git update-index --skip-worktree` on `environment.local.ts`. This prevents you from accidentally committing your token while keeping the file in the repo for Netlify builds.
 
 ### Production Deployment (Netlify)
 
