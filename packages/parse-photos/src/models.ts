@@ -39,3 +39,22 @@ export interface ImageDataResults {
   imagesPoints: FeatureCollection;
   usTotals: string[];
 }
+
+export interface StatusAltitude {
+  min: number;
+  max: number;
+  average: number;
+}
+
+export interface StatsTotals {
+  images: number;
+  countries: number;
+  us: number;
+}
+
+export interface Stats {
+  altitude: StatusAltitude;
+  totals: StatsTotals;
+  countries: CountryInfo[];
+  states: string[];
+}
