@@ -8,7 +8,8 @@
     "build:parse": "cd packages/parse-photos/ && npm run build",
     "build:ng": "cd apps/bulbutin-ng/ && ng build -c production",
     "deploy:ng": "npm run build:ng && rm -rf dist && mkdir -p dist && cp -r apps/bulbutin-ng/dist/bulbutin-ng/browser/* dist/",
-    "postinstall": "npm run build:parse"
+    "cp:images": "mkdir -p apps/bulbutin-ng/public/assets/bulbutin-images && cp packages/parse-photos/images/* apps/bulbutin-ng/public/assets/bulbutin-images/",
+    "postinstall": "npm run build:parse && npm run cp:images"
   },
   "author": "Lonny Gomes",
   "license": "ISC",

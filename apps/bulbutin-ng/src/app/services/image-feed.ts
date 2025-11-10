@@ -25,7 +25,7 @@ export class ImageFeed {
 
     const processedImages = rawImages.map((curImg: any) => ({
       ...curImg,
-      image: `assets/images/${curImg.image}`,
+      image: `assets/bulbutin-images/${curImg.image}`,
       timestamp: new Date(curImg.timestamp).toLocaleString(),
     })) as ImageModel[];
 
