@@ -1,12 +1,14 @@
 import { Component, input } from '@angular/core';
-import { ImageModel } from '../models/image.model';
+import { DecimalPipe } from '@angular/common';
+import { DateFormatPipe } from '../pipes/date-format.pipe';
+import { ImageResult } from 'parse-photos';
 
 @Component({
   selector: 'app-image-card',
-  imports: [],
+  imports: [DateFormatPipe, DecimalPipe],
   templateUrl: './image-card.html',
   styleUrl: './image-card.scss',
 })
 export class ImageCard {
-  image = input.required<ImageModel>();
+  image = input.required<ImageResult>();
 }

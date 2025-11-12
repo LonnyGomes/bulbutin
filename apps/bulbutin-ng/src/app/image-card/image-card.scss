@@ -1,11 +1,9 @@
 .image-card {
   max-width: 480px;
   width: 100%;
-  aspect-ratio: 1 / 1;
-  position: relative;
-  overflow: hidden;
 
   .image {
+    aspect-ratio: 1 / 1;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -14,16 +12,22 @@
   }
 
   .info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 16px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    gap: 12px;
+    align-items: center;
+    padding-bottom: 20px;
+
+    .location-time {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .metadata {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
 
     .country-info {
       display: flex;

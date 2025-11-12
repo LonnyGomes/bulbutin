@@ -1,13 +1,23 @@
 <div class="image-card">
   <img class="image" [src]="image().image" />
   <div class="info">
-    <div class="country-info">
-      <span class="flag" [innerHTML]="image().flag"></span>
-      <span [innerHTML]="image().formattedName"></span>
+    <div class="location-time">
+      <div class="country-info">
+        <span class="flag" [innerHTML]="image().flag"></span>
+        <span [innerHTML]="image().formattedName"></span>
+      </div>
+      <div class="timestamp">
+        <span class="date">{{ image().timestamp | dateFormat }}</span>
+        </div>
+        </div>
+    <div class="metadata">
+      <div class="distance">
+        <span>{{ image().distance | number:'1.0-0' }} miles away</span>
+      </div>
+      <div class="altitude">
+        @if (image().altitude) {
+        <span>{{ image().altitude | number:'1.0-0' }} feet altitude</span>
+        }
+      </div>
     </div>
-    <div class="timestamp">
-      <span class="date" [innerHTML]="image().timestamp"></span>
-    </div>
-  </div>
-
 </div>

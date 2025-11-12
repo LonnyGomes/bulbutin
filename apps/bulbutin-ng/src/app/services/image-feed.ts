@@ -1,15 +1,14 @@
 import { Injectable, signal } from '@angular/core';
-import { ImageModel } from '../models/image.model';
 import { FeatureCollection } from 'geojson';
 // Import directly from parse-photos static JSON export
 import { imageDataResultsJSON, genGeoJSONPoints } from 'parse-photos/shared';
-import { ImageDataResults, Stats } from 'parse-photos/types';
+import { ImageDataResults, ImageResult, Stats } from 'parse-photos/types';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ImageFeed {
-  readonly images = signal<ImageModel[]>([]);
+  readonly images = signal<ImageResult[]>([]);
   readonly imagePoints = signal<FeatureCollection>({
     type: 'FeatureCollection',
     features: [],
@@ -34,7 +33,7 @@ export class ImageFeed {
       ...curImg,
       image: `assets/bulbutin-images/${curImg.image}`,
       timestamp: new Date(curImg.timestamp).toLocaleString(),
-    })) as ImageModel[];
+    })) as ImageResult[];
 
     const imagesPoints = genGeoJSONPoints(rawImages);
     this.images.set(processedImages);
