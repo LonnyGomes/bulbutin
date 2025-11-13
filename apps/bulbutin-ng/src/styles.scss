@@ -1,16 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 @use 'theme';
 
+@use '@fontsource/special-gothic-condensed-one';
+// Supports weights 100-700
+@use '@fontsource-variable/ibm-plex-sans';
+
 /* Mapbox GL CSS */
 @import 'mapbox-gl/dist/mapbox-gl.css';
 
 :root {
   --toolbar-bg: var(--primary-color);
   --navbar-bg: var(--primary-color);
+  --header-clr: #ffffff;
 }
 
 body {
   margin: 0px;
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
+  font-family: 'IBM Plex Sans Variable', sans-serif;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Special Gothic Condensed One', sans-serif;
+  margin: 0;
+  color: var(--header-clr);
 }

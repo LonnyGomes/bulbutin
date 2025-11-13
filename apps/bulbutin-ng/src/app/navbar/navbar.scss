@@ -1,3 +1,10 @@
 :host {
   background-color: var(--navbar-bg, #ffffff);
 }
+
+.navbar-container {
+  display: grid;
+  grid-template-columns: 1fr ;
+  justify-items: center;
+}
+

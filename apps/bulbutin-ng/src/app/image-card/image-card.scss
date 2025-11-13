@@ -15,7 +15,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
     gap: 12px;
-    align-items: center;
+    align-items: flex-start;
     padding-bottom: 20px;
 
     .location-time {
@@ -31,7 +31,6 @@
 
     .country-info {
       display: flex;
-      align-items: center;
       gap: 8px;
 
       .flag {
