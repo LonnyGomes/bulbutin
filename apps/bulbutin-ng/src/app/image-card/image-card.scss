@@ -18,6 +18,12 @@
     align-items: flex-start;
     padding-bottom: 20px;
 
+    .icon {
+      width:18px;
+      height:18px;
+      padding-right:4px;
+    }
+
     .location-time {
       display: flex;
       flex-direction: column;
@@ -43,6 +49,11 @@
         font-size: 14px;
         opacity: 0.9;
       }
+    }
+
+    .altitude,.distance, .timestamp {
+      display: flex;
+      align-items: center;
     }
   }
 }

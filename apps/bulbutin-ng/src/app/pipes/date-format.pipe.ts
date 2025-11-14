@@ -14,7 +14,7 @@ export class DateFormatPipe implements PipeTransform {
     const date = new Date(value);
 
     const day = date.getDate();
-    const month = date.toLocaleDateString('en-US', { month: 'long' });
+    const month = date.toLocaleDateString('en-US', { month: 'short' });
     const year = date.getFullYear();
     const time = date.toLocaleTimeString('en-US', {
       hour: '2-digit',

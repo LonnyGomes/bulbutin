@@ -15,16 +15,19 @@
         <span [innerHTML]="image().formattedName"></span>
       </div>
       <div class="timestamp">
+        <img class="icon" src="/assets/icons/mdi-light_clock.png">
         <span class="date">{{ image().timestamp | dateFormat }}</span>
-        </div>
-        </div>
+      </div>
+    </div>
     <div class="metadata">
       <div class="distance">
-        <span>{{ image().distance | number:'1.0-0' }} miles away</span>
+        <img class="icon" src="/assets/icons/octicon_milestone-24.png">
+        <span>{{ image().distance | number:'1.0-0' }} miles </span>
       </div>
       <div class="altitude">
         @if (image().altitude) {
-        <span>{{ image().altitude | number:'1.0-0' }} feet altitude</span>
+        <img class="icon" src="/assets/icons/hugeicons_mountain.png">
+        <span>{{ image().altitude | number:'1.0-0' }} feet</span>
         }
       </div>
     </div>
