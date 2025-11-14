@@ -10,7 +10,12 @@ const imagesDir = path.resolve(__dirname, "../images");
 processImages(imagesDir, homeCoordinates)
   .then(async (results) => {
     console.log("Altitude Stats:", results.altitudeStats);
-    console.log("Final Results:", results.countryTotals, results.usTotals);
+    console.log(
+      "Final Results:",
+      results.countryTotals,
+      results.usTotals,
+      results.distanceTraveled,
+    );
     await saveImageData(results);
     console.log("Data saved to images.json");
   })

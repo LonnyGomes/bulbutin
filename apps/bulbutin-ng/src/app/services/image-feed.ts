@@ -18,6 +18,7 @@ export class ImageFeed {
     totals: { images: 0, countries: 0, us: 0 },
     countries: [],
     states: [],
+    distanceTraveled: 0,
   });
 
   constructor() {
@@ -52,6 +53,7 @@ export class ImageFeed {
       },
       countries: jsonResults.countryTotals,
       states: jsonResults.usTotals,
+      distanceTraveled: jsonResults.distanceTraveled,
     };
 
     this.stats.set(stats);

@@ -35,6 +35,7 @@ export interface AltitudeStats {
 export interface ImageDataResults {
   altitudeStats: AltitudeStats;
   countryTotals: CountryInfo[];
+  distanceTraveled: number;
   images: ImageResult[];
   imagesPoints: FeatureCollection;
   usTotals: string[];
@@ -56,5 +57,6 @@ export interface Stats {
   altitude: StatusAltitude;
   totals: StatsTotals;
   countries: CountryInfo[];
+  distanceTraveled: number;
   states: string[];
 }

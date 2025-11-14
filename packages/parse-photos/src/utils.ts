@@ -10,6 +10,8 @@ import {
   genGeoJSONPoints,
 } from "./shared.js";
 
+let distanceTraveled = 0;
+
 export async function extractMetadata(
   imagePath: string,
   homeCoords: readonly [lon: number, lat: number],
@@ -118,13 +120,26 @@ export async function processImages(
   const imageFiles = files.filter((file) =>
     extentions.includes(path.extname(file).toLowerCase()),
   );
+  let prevCoord: [number, number] = [...homeCoords];
+
   const promises = imageFiles.map(async (image) => {
     const imagePath = path.join(basePath, image);
     const metadata = await extractMetadata(imagePath, homeCoords);
+    distanceTraveled +=
+      metadata.longitude !== undefined
+        ? haversineDistance(
+            prevCoord[0],
+            prevCoord[1],
+            metadata.longitude,
+            metadata.latitude,
+          )
+        : 0;
+    prevCoord = [metadata.longitude, metadata.latitude];
     return metadata;
   });
 
   const results = await Promise.all(promises);
+  console.log(`Total Distance Traveled: ${Math.round(distanceTraveled)} miles`);
   const images = results.sort(
     (a, b) => b.timestamp.getTime() - a.timestamp.getTime(),
   );
@@ -139,5 +154,6 @@ export async function processImages(
     images,
     usTotals,
     imagesPoints,
+    distanceTraveled,
   };
 }
