@@ -37,12 +37,14 @@ export const environment = {
    - **Value**: Your Mapbox token (starts with `pk.`)
 3. Redeploy your site
 
-The production build will automatically use this environment variable.
+The custom build script (`scripts/build.js`) reads the environment variable and injects it into the production bundle at build time.
+
+**Note about Secrets Scanning**: Netlify scans builds for secrets, but Mapbox public tokens (`pk.*`) are designed to be exposed in client-side code. They are domain-restricted and have limited permissions. The `netlify.toml` configuration includes `SECRETS_SCAN_OMIT_KEYS = "MAPBOX_ACCESS_TOKEN"` to tell Netlify this is expected.
 
 ### Environment Files
 
 - `environment.local.ts` - Contains your local token (committed with empty token, edit locally but don't commit changes)
-- `environment.ts` - Production config, reads from `process.env` (committed)
+- `environment.ts` - Production config, uses `MAPBOX_ACCESS_TOKEN` constant injected at build time
 - `environment.development.ts` - Development config, imports from `environment.local.ts` (committed)
 
 ### How It Works
@@ -51,7 +53,8 @@ The production build will automatically use this environment variable.
   - Uses `environment.development.ts` 
   - Imports your local token from `environment.local.ts`
   
-- **Production** (`npm run build` or `ng build`): 
+- **Production** (`npm run build`): 
   - Uses `environment.ts` (default)
-  - Reads `MAPBOX_ACCESS_TOKEN` from Netlify environment variables
-  - `environment.local.ts` exists with empty token, so TypeScript is happy
+  - Custom build script reads `MAPBOX_ACCESS_TOKEN` from environment variables
+  - Injects the token value into the bundle using Angular's `define` option
+  - The `MAPBOX_ACCESS_TOKEN` constant is replaced with the actual string value at build time
