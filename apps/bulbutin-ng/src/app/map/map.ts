@@ -25,7 +25,7 @@ export class Map implements OnInit, OnDestroy {
   private darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
   currentImageIndex = computed(
-    () => `${this.imgFeed.mapIndex() + 1} / ${this.imgFeed.images().length}`
+    () => `${this.imgFeed.mapIndex() + 1} / ${this.imgFeed.images().length}`,
   );
 
   // Computed property to get the appropriate map style based on dark mode
@@ -41,8 +41,11 @@ export class Map implements OnInit, OnDestroy {
         const { longitude, latitude } = images[index];
         this.map.flyTo({
           center: [longitude, latitude],
-          zoom: 12,
+          zoom: 15,
+          pitch: 60, // Angle the camera (0-85 degrees)
+          bearing: 0, // Rotation (0-360 degrees)
           essential: true,
+          // duration: 2500, // Smooth 2.5 second animation
         });
       }
     });
@@ -69,6 +72,8 @@ export class Map implements OnInit, OnDestroy {
       style: this.getMapStyle(), // Use style based on dark mode
       center: [-77.0369, 38.9072], // Default center (Washington DC)
       zoom: 9,
+      pitch: 45, // Start with angled perspective
+      bearing: 0, // Initial rotation
     });
 
     // Add navigation controls
@@ -100,8 +105,8 @@ export class Map implements OnInit, OnDestroy {
       type: 'circle',
       source: 'imagesSource',
       paint: {
-        'circle-radius': 6,
-        'circle-color': '#FF5722',
+        'circle-radius': 8,
+        'circle-color': '#ff0000',
         'circle-stroke-width': 2,
         'circle-stroke-color': '#FFFFFF',
       },
@@ -111,10 +116,19 @@ export class Map implements OnInit, OnDestroy {
     this.map!.on('click', 'imagesLayer', (e) => {
       const coordinates = (e.features![0].geometry as any).coordinates.slice();
       const title = e.features?.[0].properties?.['title'] || '';
-      if (coordinates && title) {
-        new mapboxgl.Popup()
+      const image = e.features?.[0].properties?.['image'] || '';
+      if (coordinates && title && image) {
+        new mapboxgl.Popup({
+          maxWidth: '300px',
+          className: 'map-image-popup',
+        })
           .setLngLat(coordinates)
-          .setHTML(`<strong>${title}</strong>`)
+          .setHTML(
+            `<div class="popup-container">
+              <img class="popup-image" src="${this.imgFeed.photosPath}${image}" alt="${title}">
+              <div class="popup-title">${title}</div>
+            </div>`,
+          )
           .addTo(this.map!);
       }
     });
