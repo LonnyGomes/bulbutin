@@ -11,6 +11,7 @@ import {
 import mapboxgl from 'mapbox-gl';
 import { environment } from '../../environments/environment';
 import { ImageFeed } from '../services/image-feed';
+import { ImageResult } from 'parse-photos';
 
 @Component({
   selector: 'app-map',
@@ -22,6 +23,7 @@ export class Map implements OnInit, OnDestroy {
   private imgFeed = inject(ImageFeed);
   private mapContainer = viewChild.required<ElementRef<HTMLDivElement>>('mapContainer');
   private map?: mapboxgl.Map;
+  private currentPopup?: mapboxgl.Popup;
   private darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
   currentImageIndex = computed(
@@ -38,7 +40,9 @@ export class Map implements OnInit, OnDestroy {
       const index = this.imgFeed.mapIndex();
       const images = this.imgFeed.images();
       if (this.map && images[index]) {
-        const { longitude, latitude } = images[index];
+        const currentImage = images[index];
+        const { longitude, latitude } = currentImage;
+
         this.map.flyTo({
           center: [longitude, latitude],
           zoom: 15,
@@ -47,6 +51,9 @@ export class Map implements OnInit, OnDestroy {
           essential: true,
           // duration: 2500, // Smooth 2.5 second animation
         });
+
+        // Open popup for the current image
+        this.openPopupForImage(currentImage);
       }
     });
 
@@ -140,6 +147,34 @@ export class Map implements OnInit, OnDestroy {
     this.map!.on('mouseleave', 'imagesLayer', () => {
       this.map!.getCanvas().style.cursor = '';
     });
+  }
+
+  private openPopupForImage(image: ImageResult) {
+    if (!this.map) return;
+
+    // Remove existing popup if any
+    if (this.currentPopup) {
+      this.currentPopup.remove();
+    }
+
+    const { longitude, latitude, formattedName, geoName, image: imagePath } = image;
+    const title = formattedName || geoName || '';
+
+    if (longitude && latitude && imagePath) {
+      this.currentPopup = new mapboxgl.Popup({
+        maxWidth: '300px',
+        className: 'map-image-popup',
+        closeOnClick: false, // Keep popup open when navigating
+      })
+        .setLngLat([longitude, latitude])
+        .setHTML(
+          `<div class="popup-container">
+            <img class="popup-image" src="${imagePath}" alt="${title}">
+            <div class="popup-title">${title}</div>
+          </div>`,
+        )
+        .addTo(this.map);
+    }
   }
 
   next() {
