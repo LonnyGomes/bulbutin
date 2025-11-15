@@ -17,6 +17,15 @@
 html {
   height: 100%;
   overflow: hidden;
+  // Disable text selection globally
+  -webkit-user-select: none;
+  user-select: none;
+  // Disable callouts and context menus on iOS
+  -webkit-touch-callout: none;
+  // Disable tap highlight
+  -webkit-tap-highlight-color: transparent;
+  // Prevent zoom on iOS
+  touch-action: pan-x pan-y;
 }
 
 body {
@@ -40,11 +49,34 @@ body {
   width: 100%;
   overscroll-behavior: none;
   -webkit-overflow-scrolling: touch;
+  
+  // Disable text selection
+  -webkit-user-select: none;
+  user-select: none;
+  // Disable callouts and context menus
+  -webkit-touch-callout: none;
+  // Prevent all zoom - only allow pan
+  touch-action: pan-x pan-y;
 }
 
-// Prevent any pull-to-refresh or bounce effects
+// Prevent any pull-to-refresh or bounce effects and disable interactions
 * {
   overscroll-behavior: none;
+  // Disable text selection on all elements
+  -webkit-user-select: none;
+  user-select: none;
+  // Disable callouts on iOS
+  -webkit-touch-callout: none;
+  // Disable tap highlight
+  -webkit-tap-highlight-color: transparent;
+  // Prevent pinch zoom - only allow panning
+  touch-action: pan-x pan-y;
+}
+
+// Re-enable selection for input fields and text areas if needed
+input, textarea {
+  -webkit-user-select: text;
+  user-select: text;
 }
 
 h1, h2, h3, h4, h5, h6 {
