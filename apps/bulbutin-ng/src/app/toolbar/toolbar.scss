@@ -56,20 +56,35 @@
   text-decoration: none;
   color: inherit;
   cursor: pointer;
-  transition: opacity 0.2s;
-
-  &:hover {
-    opacity: 0.7;
-  }
+  position: relative;
+  padding: 5px;
+  border-radius: 12px;
 
   &.active {
-    font-weight: bold;
-    opacity: 1;
+    // Neumorphic background with gradient
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.05));
+
+    // Neumorphic shadows - creates pressed/inset effect
+    box-shadow:
+      // Inner shadows (darker on top-left, lighter on bottom-right)
+      inset 2px 2px 5px rgba(0, 0, 0, 0.2),
+      inset -2px -2px 5px rgba(255, 255, 255, 0.1),
+      // Outer glow for depth
+      0 0 2px rgba(255, 255, 255, 0.15);
+
+    img {
+      // Add subtle glow
+      opacity: 1;
+      filter: brightness(0) invert(1) drop-shadow(0 0 4px rgba(255, 255, 255, 0.6));
+    }
   }
 
   img {
-    width: 32px; // Smaller icon for 60px toolbar
+    width: 32px;
     height: 32px;
-    filter: brightness(0) invert(1); // inverse default color
+    opacity: 0.7; // Inactive icons slightly dimmed
+    filter: brightness(0) invert(1);
+    display: block;
   }
+
 }
