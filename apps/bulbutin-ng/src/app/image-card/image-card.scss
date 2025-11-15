@@ -24,9 +24,10 @@
     }
 
     .icon {
-      width:18px;
-      height:18px;
-      padding-right:4px;
+      width: 18px;
+      height: 18px;
+      padding-right: 4px;
+      filter: var(--icon-filter); // Applies theme-aware filter
     }
 
     .location-time {
