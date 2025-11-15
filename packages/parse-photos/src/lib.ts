@@ -10,5 +10,4 @@ export type {
 export { loadImageData, saveImageData, getImagesJsonPath } from "./data.js";
 
 // Export utility functions (for advanced usage)
-export { processImages, extractMetadata } from "./utils.js";
-
+export { processImages } from "./utils.js";

@@ -12,8 +12,9 @@ import {
 
 let distanceTraveled = 0;
 
-export async function extractMetadata(
+async function extractMetadata(
   imagePath: string,
+  id: number,
   homeCoords: readonly [lon: number, lat: number],
 ): Promise<ImageResult> {
   const metadata = await exifr.parse(imagePath);
@@ -52,6 +53,7 @@ export async function extractMetadata(
       : `${geoName}, ${countryName}`;
 
   return {
+    id,
     image,
     altitude: GPSAltitude ? metersToFeet(GPSAltitude) : undefined,
     timestamp: DateTimeOriginal,
@@ -122,9 +124,9 @@ export async function processImages(
   );
   let prevCoord: [number, number] = [...homeCoords];
 
-  const promises = imageFiles.map(async (image) => {
+  const promises = imageFiles.map(async (image, id) => {
     const imagePath = path.join(basePath, image);
-    const metadata = await extractMetadata(imagePath, homeCoords);
+    const metadata = await extractMetadata(imagePath, id, homeCoords);
     distanceTraveled +=
       metadata.longitude !== undefined
         ? haversineDistance(

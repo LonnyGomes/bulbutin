@@ -1,6 +1,7 @@
 import type { FeatureCollection } from "geojson";
 
 export interface ImageResult {
+  id: number;
   image: string;
   altitude?: number;
   timestamp: Date;
