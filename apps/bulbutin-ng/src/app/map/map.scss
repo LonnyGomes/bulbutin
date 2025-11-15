@@ -1,5 +1,75 @@
+$arrow-padding: 10px;
+
 .map-container {
   width: 100%;
   height: calc(100vh - var(--navbar-height) - var(--toolbar-height));
   min-height: 400px;
 }
+
+.map-img-btn {
+  position: absolute;
+  bottom: calc(var(--toolbar-height) + 10px);
+  border: none;
+  padding: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  // Primary color as base
+  background-color: var(--primary-color);
+
+  // Neumorphic shadows - creates soft, raised effect
+  box-shadow:
+    // Inner shadows for depth
+    inset 2px 2px 5px rgba(0, 0, 0, 0.15),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.08),
+    // Outer glow
+    0 0 8px rgba(255, 255, 255, 0.15);
+
+  // SVG as background image
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 26px 26px;
+
+  &:hover {
+    // Enhance the neumorphic effect on hover
+    box-shadow:
+      inset 2px 2px 5px rgba(0, 0, 0, 0.2),
+      inset -2px -2px 5px rgba(255, 255, 255, 0.12),
+      0 0 12px rgba(255, 255, 255, 0.2);
+    transform: scale(1.02);
+  }
+
+  &:active {
+    // Pressed state - invert the shadow
+    box-shadow:
+      inset 3px 3px 6px rgba(0, 0, 0, 0.25),
+      inset -1px -1px 3px rgba(255, 255, 255, 0.05);
+    transform: scale(0.98);
+  }
+
+  &.left {
+    right: auto;
+    left: $arrow-padding;
+    // Left arrow - flip horizontally
+    background-image: url('/assets/icons/mdi-light_arrow-right.svg');
+    transform: scaleX(-1);
+
+    &:hover {
+      transform: scaleX(-1) scale(1.02);
+    }
+
+    &:active {
+      transform: scaleX(-1) scale(0.98);
+    }
+  }
+
+  &.right {
+    right: $arrow-padding;
+    background-image: url('/assets/icons/mdi-light_arrow-right.svg');
+  }
+}
+
+
