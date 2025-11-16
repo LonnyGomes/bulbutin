@@ -1,8 +1,8 @@
 {
   "altitudeStats": {
     "min": 2,
-    "max": 5293,
-    "average": 354
+    "max": 7972,
+    "average": 753
   },
   "countryTotals": [
     {
@@ -33,26 +33,79 @@
   ],
   "images": [
     {
-      "id": 12,
-      "image": "IMG_0143.JPG",
-      "altitude": 152,
-      "timestamp": "2024-08-11T02:03:07.000Z",
+      "id": 3,
+      "image": "7308918047400158217.jpg",
+      "altitude": 6759,
+      "timestamp": "2024-08-24T21:46:25.000Z",
       "speed": 0,
-      "make": "Apple",
-      "model": "iPhone 15 Pro",
-      "latitude": 38.91678611111111,
-      "longitude": -77.0035861111111,
-      "geoName": "Bloomingdale",
-      "formattedName": "Bloomingdale, District of Columbia",
+      "latitude": 39.979,
+      "longitude": -105.194,
+      "geoName": "Superior",
+      "formattedName": "Superior, Colorado",
       "countryCode": "US",
       "countryName": "United States",
       "flag": "🇺🇸",
-      "adminName1": "District of Columbia",
-      "geoDistance": 0.6734330843349562,
-      "distance": 2
+      "adminName1": "Colorado",
+      "adminName2": "Boulder County",
+      "geoDistance": 3.633048691289213,
+      "distance": 1500
     },
     {
-      "id": 65,
+      "id": 1,
+      "image": "5566879053881335906.jpg",
+      "altitude": 7972,
+      "timestamp": "2024-08-17T18:56:26.000Z",
+      "speed": 0,
+      "latitude": 38.913,
+      "longitude": -105.285,
+      "geoName": "Cripple Creek",
+      "formattedName": "Cripple Creek, Colorado",
+      "countryCode": "US",
+      "countryName": "United States",
+      "flag": "🇺🇸",
+      "adminName1": "Colorado",
+      "adminName2": "Teller County",
+      "geoDistance": 20.676489518557712,
+      "distance": 1514
+    },
+    {
+      "id": 0,
+      "image": "3332584359264293728.jpg",
+      "altitude": 5906,
+      "timestamp": "2024-08-16T15:12:27.000Z",
+      "speed": 0,
+      "latitude": 39.689,
+      "longitude": -105.191,
+      "geoName": "West Pleasant View",
+      "formattedName": "West Pleasant View, Colorado",
+      "countryCode": "US",
+      "countryName": "United States",
+      "flag": "🇺🇸",
+      "adminName1": "Colorado",
+      "adminName2": "Jefferson County",
+      "geoDistance": 4.959898568926599,
+      "distance": 1502
+    },
+    {
+      "id": 2,
+      "image": "6680929339117383400.jpg",
+      "altitude": 5741,
+      "timestamp": "2024-08-16T14:38:28.000Z",
+      "speed": 0,
+      "latitude": 39.675,
+      "longitude": -105.19,
+      "geoName": "West Pleasant View",
+      "formattedName": "West Pleasant View, Colorado",
+      "countryCode": "US",
+      "countryName": "United States",
+      "flag": "🇺🇸",
+      "adminName1": "Colorado",
+      "adminName2": "Jefferson County",
+      "geoDistance": 6.475290022219157,
+      "distance": 1502
+    },
+    {
+      "id": 68,
       "image": "IMG_9666.JPG",
       "altitude": 23,
       "timestamp": "2024-06-21T19:25:22.000Z",
@@ -72,7 +125,7 @@
       "distance": 3665
     },
     {
-      "id": 64,
+      "id": 67,
       "image": "IMG_9661.JPG",
       "altitude": 15,
       "timestamp": "2024-06-21T19:23:48.000Z",
@@ -92,7 +145,7 @@
       "distance": 3665
     },
     {
-      "id": 63,
+      "id": 66,
       "image": "IMG_9658.JPG",
       "altitude": 19,
       "timestamp": "2024-06-21T19:06:07.000Z",
@@ -112,7 +165,7 @@
       "distance": 3665
     },
     {
-      "id": 62,
+      "id": 65,
       "image": "IMG_9653.JPG",
       "altitude": 22,
       "timestamp": "2024-06-21T18:41:13.000Z",
@@ -132,7 +185,7 @@
       "distance": 3664
     },
     {
-      "id": 61,
+      "id": 64,
       "image": "IMG_8679.JPG",
       "altitude": 132,
       "timestamp": "2024-05-07T19:29:39.000Z",
@@ -152,7 +205,7 @@
       "distance": 2201
     },
     {
-      "id": 36,
+      "id": 39,
       "image": "IMG_0884.jpeg",
       "timestamp": "2023-11-24T15:30:24.000Z",
       "speed": 0,
@@ -171,7 +224,7 @@
       "distance": 3381
     },
     {
-      "id": 35,
+      "id": 38,
       "image": "IMG_0858.jpeg",
       "timestamp": "2023-11-22T18:19:22.000Z",
       "speed": 0,
@@ -190,7 +243,7 @@
       "distance": 3380
     },
     {
-      "id": 34,
+      "id": 37,
       "image": "IMG_0835.jpeg",
       "timestamp": "2023-11-22T17:30:06.000Z",
       "speed": 0,
@@ -209,7 +262,7 @@
       "distance": 3381
     },
     {
-      "id": 56,
+      "id": 59,
       "image": "IMG_3486.jpeg",
       "altitude": 370,
       "timestamp": "2023-09-23T14:53:04.000Z",
@@ -229,7 +282,7 @@
       "distance": 2070
     },
     {
-      "id": 55,
+      "id": 58,
       "image": "IMG_3275.jpeg",
       "altitude": 4530,
       "timestamp": "2023-09-21T22:01:41.000Z",
@@ -249,7 +302,7 @@
       "distance": 1945
     },
     {
-      "id": 54,
+      "id": 57,
       "image": "IMG_3196.jpeg",
       "altitude": 5293,
       "timestamp": "2023-09-21T17:42:47.000Z",
@@ -269,7 +322,7 @@
       "distance": 1946
     },
     {
-      "id": 53,
+      "id": 56,
       "image": "IMG_2982.jpeg",
       "altitude": 1253,
       "timestamp": "2023-09-20T20:27:34.000Z",
@@ -289,7 +342,7 @@
       "distance": 2064
     },
     {
-      "id": 52,
+      "id": 55,
       "image": "IMG_2973.jpeg",
       "altitude": 1284,
       "timestamp": "2023-09-20T20:23:03.000Z",
@@ -309,7 +362,7 @@
       "distance": 2064
     },
     {
-      "id": 51,
+      "id": 54,
       "image": "IMG_2521.jpeg",
       "altitude": 407,
       "timestamp": "2023-09-16T20:41:36.000Z",
@@ -329,7 +382,7 @@
       "distance": 3822
     },
     {
-      "id": 50,
+      "id": 53,
       "image": "IMG_2484.jpeg",
       "altitude": 379,
       "timestamp": "2023-09-16T19:49:57.000Z",
@@ -349,7 +402,7 @@
       "distance": 3821
     },
     {
-      "id": 49,
+      "id": 52,
       "image": "IMG_2458.jpeg",
       "altitude": 422,
       "timestamp": "2023-09-16T19:11:50.000Z",
@@ -369,7 +422,7 @@
       "distance": 3822
     },
     {
-      "id": 48,
+      "id": 51,
       "image": "IMG_1944.jpeg",
       "altitude": 242,
       "timestamp": "2023-09-14T14:36:32.000Z",
@@ -389,7 +442,7 @@
       "distance": 3830
     },
     {
-      "id": 46,
+      "id": 49,
       "image": "IMG_1889.jpeg",
       "altitude": 96,
       "timestamp": "2023-09-14T01:16:35.000Z",
@@ -409,7 +462,7 @@
       "distance": 3828
     },
     {
-      "id": 45,
+      "id": 48,
       "image": "IMG_1712.jpeg",
       "altitude": 190,
       "timestamp": "2023-09-13T20:54:15.000Z",
@@ -429,7 +482,7 @@
       "distance": 3830
     },
     {
-      "id": 44,
+      "id": 47,
       "image": "IMG_1663.jpeg",
       "altitude": 190,
       "timestamp": "2023-09-13T20:21:14.000Z",
@@ -449,7 +502,7 @@
       "distance": 3830
     },
     {
-      "id": 43,
+      "id": 46,
       "image": "IMG_1658.jpeg",
       "timestamp": "2023-09-13T20:17:12.000Z",
       "speed": 0,
@@ -468,7 +521,7 @@
       "distance": 3830
     },
     {
-      "id": 42,
+      "id": 45,
       "image": "IMG_1655.jpeg",
       "altitude": 190,
       "timestamp": "2023-09-13T20:13:47.000Z",
@@ -488,7 +541,7 @@
       "distance": 3830
     },
     {
-      "id": 41,
+      "id": 44,
       "image": "IMG_1200.jpeg",
       "altitude": 108,
       "timestamp": "2023-09-10T14:07:38.000Z",
@@ -508,7 +561,7 @@
       "distance": 3829
     },
     {
-      "id": 40,
+      "id": 43,
       "image": "IMG_1196.jpeg",
       "altitude": 121,
       "timestamp": "2023-09-10T14:01:20.000Z",
@@ -528,7 +581,7 @@
       "distance": 3829
     },
     {
-      "id": 47,
+      "id": 50,
       "image": "IMG_1929.JPG",
       "altitude": 389,
       "timestamp": "2023-09-09T23:32:29.000Z",
@@ -548,7 +601,7 @@
       "distance": 3829
     },
     {
-      "id": 39,
+      "id": 42,
       "image": "IMG_1155.jpeg",
       "altitude": 157,
       "timestamp": "2023-09-09T19:50:21.000Z",
@@ -568,7 +621,7 @@
       "distance": 3830
     },
     {
-      "id": 38,
+      "id": 41,
       "image": "IMG_1149.jpeg",
       "altitude": 156,
       "timestamp": "2023-09-09T19:46:16.000Z",
@@ -588,7 +641,7 @@
       "distance": 3830
     },
     {
-      "id": 37,
+      "id": 40,
       "image": "IMG_0947.jpeg",
       "altitude": 343,
       "timestamp": "2023-09-07T23:32:27.000Z",
@@ -608,7 +661,7 @@
       "distance": 3827
     },
     {
-      "id": 33,
+      "id": 36,
       "image": "IMG_0829.jpeg",
       "altitude": 113,
       "timestamp": "2023-09-07T13:59:42.000Z",
@@ -628,7 +681,7 @@
       "distance": 3830
     },
     {
-      "id": 32,
+      "id": 35,
       "image": "IMG_0819.jpeg",
       "altitude": 84,
       "timestamp": "2023-09-07T13:52:58.000Z",
@@ -648,7 +701,7 @@
       "distance": 3830
     },
     {
-      "id": 31,
+      "id": 34,
       "image": "IMG_0781.jpeg",
       "altitude": 98,
       "timestamp": "2023-09-06T22:49:25.000Z",
@@ -668,7 +721,7 @@
       "distance": 3829
     },
     {
-      "id": 30,
+      "id": 33,
       "image": "IMG_0717.jpeg",
       "altitude": 105,
       "timestamp": "2023-09-06T21:54:55.000Z",
@@ -688,7 +741,7 @@
       "distance": 3829
     },
     {
-      "id": 29,
+      "id": 32,
       "image": "IMG_0713.jpeg",
       "altitude": 108,
       "timestamp": "2023-09-06T21:53:39.000Z",
@@ -708,7 +761,7 @@
       "distance": 3829
     },
     {
-      "id": 28,
+      "id": 31,
       "image": "IMG_0703.jpeg",
       "altitude": 107,
       "timestamp": "2023-09-06T21:28:57.000Z",
@@ -728,7 +781,7 @@
       "distance": 3829
     },
     {
-      "id": 27,
+      "id": 30,
       "image": "IMG_0552.jpeg",
       "altitude": 119,
       "timestamp": "2023-09-04T21:09:50.000Z",
@@ -748,7 +801,7 @@
       "distance": 3831
     },
     {
-      "id": 26,
+      "id": 29,
       "image": "IMG_0546.jpeg",
       "altitude": 96,
       "timestamp": "2023-09-04T19:10:28.000Z",
@@ -768,7 +821,7 @@
       "distance": 3829
     },
     {
-      "id": 25,
+      "id": 28,
       "image": "IMG_0528.jpeg",
       "altitude": 97,
       "timestamp": "2023-09-04T18:44:04.000Z",
@@ -788,7 +841,7 @@
       "distance": 3829
     },
     {
-      "id": 24,
+      "id": 27,
       "image": "IMG_0524.jpeg",
       "altitude": 94,
       "timestamp": "2023-09-04T18:41:09.000Z",
@@ -808,7 +861,7 @@
       "distance": 3829
     },
     {
-      "id": 23,
+      "id": 26,
       "image": "IMG_0516.jpeg",
       "altitude": 79,
       "timestamp": "2023-09-04T18:04:08.000Z",
@@ -828,7 +881,7 @@
       "distance": 3828
     },
     {
-      "id": 22,
+      "id": 25,
       "image": "IMG_0489.jpeg",
       "altitude": 269,
       "timestamp": "2023-09-04T10:54:51.000Z",
@@ -848,7 +901,7 @@
       "distance": 3859
     },
     {
-      "id": 21,
+      "id": 24,
       "image": "IMG_0332.jpeg",
       "altitude": 62,
       "timestamp": "2023-09-02T21:16:10.000Z",
@@ -868,7 +921,7 @@
       "distance": 3862
     },
     {
-      "id": 20,
+      "id": 23,
       "image": "IMG_0328.jpeg",
       "altitude": 63,
       "timestamp": "2023-09-02T21:09:44.000Z",
@@ -888,7 +941,7 @@
       "distance": 3862
     },
     {
-      "id": 19,
+      "id": 22,
       "image": "IMG_0325.jpeg",
       "altitude": 60,
       "timestamp": "2023-09-02T21:06:11.000Z",
@@ -908,7 +961,7 @@
       "distance": 3862
     },
     {
-      "id": 18,
+      "id": 21,
       "image": "IMG_0303.jpeg",
       "altitude": 60,
       "timestamp": "2023-09-02T20:09:01.000Z",
@@ -928,7 +981,7 @@
       "distance": 3862
     },
     {
-      "id": 17,
+      "id": 20,
       "image": "IMG_0287.jpeg",
       "altitude": 75,
       "timestamp": "2023-09-02T19:18:20.000Z",
@@ -948,7 +1001,7 @@
       "distance": 3862
     },
     {
-      "id": 16,
+      "id": 19,
       "image": "IMG_0278.jpeg",
       "altitude": 74,
       "timestamp": "2023-09-02T18:57:52.000Z",
@@ -968,7 +1021,7 @@
       "distance": 3862
     },
     {
-      "id": 15,
+      "id": 18,
       "image": "IMG_0271.jpeg",
       "altitude": 51,
       "timestamp": "2023-09-02T18:51:33.000Z",
@@ -988,7 +1041,7 @@
       "distance": 3862
     },
     {
-      "id": 14,
+      "id": 17,
       "image": "IMG_0262.jpeg",
       "altitude": 138,
       "timestamp": "2023-09-02T17:42:28.000Z",
@@ -1008,7 +1061,7 @@
       "distance": 3862
     },
     {
-      "id": 13,
+      "id": 16,
       "image": "IMG_0225.jpeg",
       "altitude": 164,
       "timestamp": "2023-09-02T16:43:24.000Z",
@@ -1028,7 +1081,7 @@
       "distance": 3863
     },
     {
-      "id": 60,
+      "id": 63,
       "image": "IMG_8654.jpg",
       "altitude": 18,
       "timestamp": "2023-07-03T01:34:16.000Z",
@@ -1048,7 +1101,7 @@
       "distance": 105
     },
     {
-      "id": 59,
+      "id": 62,
       "image": "IMG_8642.jpg",
       "altitude": 25,
       "timestamp": "2023-07-02T20:12:10.000Z",
@@ -1068,7 +1121,7 @@
       "distance": 105
     },
     {
-      "id": 8,
+      "id": 12,
       "image": "IMG_0009.JPG",
       "altitude": 454,
       "timestamp": "2023-06-22T16:45:01.000Z",
@@ -1088,7 +1141,7 @@
       "distance": 297
     },
     {
-      "id": 7,
+      "id": 11,
       "image": "IMG_0008.JPG",
       "altitude": 541,
       "timestamp": "2023-06-20T20:05:19.000Z",
@@ -1108,7 +1161,7 @@
       "distance": 309
     },
     {
-      "id": 3,
+      "id": 7,
       "image": "IMG_0004.JPG",
       "altitude": 825,
       "timestamp": "2023-06-19T20:23:12.000Z",
@@ -1128,7 +1181,7 @@
       "distance": 241
     },
     {
-      "id": 1,
+      "id": 5,
       "image": "IMG_0002.JPG",
       "altitude": 722,
       "timestamp": "2023-06-17T20:16:46.000Z",
@@ -1148,7 +1201,7 @@
       "distance": 244
     },
     {
-      "id": 6,
+      "id": 10,
       "image": "IMG_0007.JPG",
       "altitude": 9,
       "timestamp": "2023-06-02T18:43:27.000Z",
@@ -1168,7 +1221,7 @@
       "distance": 266
     },
     {
-      "id": 10,
+      "id": 14,
       "image": "IMG_0011.JPG",
       "altitude": 11,
       "timestamp": "2023-06-02T18:32:36.000Z",
@@ -1188,7 +1241,7 @@
       "distance": 264
     },
     {
-      "id": 0,
+      "id": 4,
       "image": "IMG_0001.JPG",
       "altitude": 2,
       "timestamp": "2023-06-01T20:39:44.000Z",
@@ -1208,7 +1261,7 @@
       "distance": 265
     },
     {
-      "id": 5,
+      "id": 9,
       "image": "IMG_0006.JPG",
       "altitude": 9,
       "timestamp": "2023-06-01T20:37:43.000Z",
@@ -1228,7 +1281,7 @@
       "distance": 265
     },
     {
-      "id": 4,
+      "id": 8,
       "image": "IMG_0005.JPG",
       "altitude": 10,
       "timestamp": "2023-06-01T20:37:01.000Z",
@@ -1248,7 +1301,7 @@
       "distance": 265
     },
     {
-      "id": 9,
+      "id": 13,
       "image": "IMG_0010.JPG",
       "altitude": 7,
       "timestamp": "2023-06-01T19:18:40.000Z",
@@ -1268,7 +1321,7 @@
       "distance": 264
     },
     {
-      "id": 11,
+      "id": 15,
       "image": "IMG_0012.JPG",
       "altitude": 3,
       "timestamp": "2023-06-01T15:29:35.000Z",
@@ -1288,7 +1341,7 @@
       "distance": 259
     },
     {
-      "id": 2,
+      "id": 6,
       "image": "IMG_0003.JPG",
       "altitude": 6,
       "timestamp": "2023-06-01T15:29:07.000Z",
@@ -1308,7 +1361,7 @@
       "distance": 259
     },
     {
-      "id": 58,
+      "id": 61,
       "image": "IMG_5684.jpeg",
       "timestamp": "2023-05-28T00:24:21.000Z",
       "speed": 0,
@@ -1327,7 +1380,7 @@
       "distance": 195
     },
     {
-      "id": 57,
+      "id": 60,
       "image": "IMG_5682.jpeg",
       "timestamp": "2023-05-28T00:19:40.000Z",
       "speed": 0,
@@ -1347,7 +1400,7 @@
     }
   ],
   "usTotals": [
-    "District of Columbia",
+    "Colorado",
     "California",
     "Arizona",
     "Utah",
@@ -1365,12 +1418,59 @@
         "geometry": {
           "type": "Point",
           "coordinates": [
-            -77.0035861111111,
-            38.91678611111111
+            -105.194,
+            39.979
           ]
         },
         "properties": {
-          "title": "Bloomingdale, District of Columbia"
+          "title": "Superior, Colorado",
+          "id": 3,
+          "image": "7308918047400158217.jpg"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -105.285,
+            38.913
+          ]
+        },
+        "properties": {
+          "title": "Cripple Creek, Colorado",
+          "id": 1,
+          "image": "5566879053881335906.jpg"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -105.191,
+            39.689
+          ]
+        },
+        "properties": {
+          "title": "West Pleasant View, Colorado",
+          "id": 0,
+          "image": "3332584359264293728.jpg"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -105.19,
+            39.675
+          ]
+        },
+        "properties": {
+          "title": "West Pleasant View, Colorado",
+          "id": 2,
+          "image": "6680929339117383400.jpg"
         }
       },
       {
@@ -1383,7 +1483,9 @@
           ]
         },
         "properties": {
-          "title": "Lambeth, United Kingdom"
+          "title": "Lambeth, United Kingdom",
+          "id": 68,
+          "image": "IMG_9666.JPG"
         }
       },
       {
@@ -1396,7 +1498,9 @@
           ]
         },
         "properties": {
-          "title": "Lambeth, United Kingdom"
+          "title": "Lambeth, United Kingdom",
+          "id": 67,
+          "image": "IMG_9661.JPG"
         }
       },
       {
@@ -1409,7 +1513,9 @@
           ]
         },
         "properties": {
-          "title": "Pimlico, United Kingdom"
+          "title": "Pimlico, United Kingdom",
+          "id": 66,
+          "image": "IMG_9658.JPG"
         }
       },
       {
@@ -1422,7 +1528,9 @@
           ]
         },
         "properties": {
-          "title": "Pimlico, United Kingdom"
+          "title": "Pimlico, United Kingdom",
+          "id": 65,
+          "image": "IMG_9653.JPG"
         }
       },
       {
@@ -1435,7 +1543,9 @@
           ]
         },
         "properties": {
-          "title": "Indian Wells, California"
+          "title": "Indian Wells, California",
+          "id": 64,
+          "image": "IMG_8679.JPG"
         }
       },
       {
@@ -1448,7 +1558,9 @@
           ]
         },
         "properties": {
-          "title": "Dublin, Ireland"
+          "title": "Dublin, Ireland",
+          "id": 39,
+          "image": "IMG_0884.jpeg"
         }
       },
       {
@@ -1461,7 +1573,9 @@
           ]
         },
         "properties": {
-          "title": "Rialto, Ireland"
+          "title": "Rialto, Ireland",
+          "id": 38,
+          "image": "IMG_0858.jpeg"
         }
       },
       {
@@ -1474,7 +1588,9 @@
           ]
         },
         "properties": {
-          "title": "Dublin, Ireland"
+          "title": "Dublin, Ireland",
+          "id": 37,
+          "image": "IMG_0835.jpeg"
         }
       },
       {
@@ -1487,7 +1603,9 @@
           ]
         },
         "properties": {
-          "title": "Cienega Springs, Arizona"
+          "title": "Cienega Springs, Arizona",
+          "id": 59,
+          "image": "IMG_3486.jpeg"
         }
       },
       {
@@ -1500,7 +1618,9 @@
           ]
         },
         "properties": {
-          "title": "Toquerville, Utah"
+          "title": "Toquerville, Utah",
+          "id": 58,
+          "image": "IMG_3275.jpeg"
         }
       },
       {
@@ -1513,7 +1633,9 @@
           ]
         },
         "properties": {
-          "title": "Hildale, Utah"
+          "title": "Hildale, Utah",
+          "id": 57,
+          "image": "IMG_3196.jpeg"
         }
       },
       {
@@ -1526,7 +1648,9 @@
           ]
         },
         "properties": {
-          "title": "Boulder City, Nevada"
+          "title": "Boulder City, Nevada",
+          "id": 56,
+          "image": "IMG_2982.jpeg"
         }
       },
       {
@@ -1539,7 +1663,9 @@
           ]
         },
         "properties": {
-          "title": "Boulder City, Nevada"
+          "title": "Boulder City, Nevada",
+          "id": 55,
+          "image": "IMG_2973.jpeg"
         }
       },
       {
@@ -1552,7 +1678,9 @@
           ]
         },
         "properties": {
-          "title": "Versailles, France"
+          "title": "Versailles, France",
+          "id": 54,
+          "image": "IMG_2521.jpeg"
         }
       },
       {
@@ -1565,7 +1693,9 @@
           ]
         },
         "properties": {
-          "title": "Versailles, France"
+          "title": "Versailles, France",
+          "id": 53,
+          "image": "IMG_2484.jpeg"
         }
       },
       {
@@ -1578,7 +1708,9 @@
           ]
         },
         "properties": {
-          "title": "Versailles, France"
+          "title": "Versailles, France",
+          "id": 52,
+          "image": "IMG_2458.jpeg"
         }
       },
       {
@@ -1591,7 +1723,9 @@
           ]
         },
         "properties": {
-          "title": "Paris, France"
+          "title": "Paris, France",
+          "id": 51,
+          "image": "IMG_1944.jpeg"
         }
       },
       {
@@ -1604,7 +1738,9 @@
           ]
         },
         "properties": {
-          "title": "Neuilly-sur-Seine, France"
+          "title": "Neuilly-sur-Seine, France",
+          "id": 49,
+          "image": "IMG_1889.jpeg"
         }
       },
       {
@@ -1617,7 +1753,9 @@
           ]
         },
         "properties": {
-          "title": "Maison Blanche, France"
+          "title": "Maison Blanche, France",
+          "id": 48,
+          "image": "IMG_1712.jpeg"
         }
       },
       {
@@ -1630,7 +1768,9 @@
           ]
         },
         "properties": {
-          "title": "Maison Blanche, France"
+          "title": "Maison Blanche, France",
+          "id": 47,
+          "image": "IMG_1663.jpeg"
         }
       },
       {
@@ -1643,7 +1783,9 @@
           ]
         },
         "properties": {
-          "title": "Maison Blanche, France"
+          "title": "Maison Blanche, France",
+          "id": 46,
+          "image": "IMG_1658.jpeg"
         }
       },
       {
@@ -1656,7 +1798,9 @@
           ]
         },
         "properties": {
-          "title": "Maison Blanche, France"
+          "title": "Maison Blanche, France",
+          "id": 45,
+          "image": "IMG_1655.jpeg"
         }
       },
       {
@@ -1669,7 +1813,9 @@
           ]
         },
         "properties": {
-          "title": "Porte Saint-Denis, France"
+          "title": "Porte Saint-Denis, France",
+          "id": 44,
+          "image": "IMG_1200.jpeg"
         }
       },
       {
@@ -1682,7 +1828,9 @@
           ]
         },
         "properties": {
-          "title": "Paris, France"
+          "title": "Paris, France",
+          "id": 43,
+          "image": "IMG_1196.jpeg"
         }
       },
       {
@@ -1695,7 +1843,9 @@
           ]
         },
         "properties": {
-          "title": "Saint-Vincent de Paul, France"
+          "title": "Saint-Vincent de Paul, France",
+          "id": 50,
+          "image": "IMG_1929.JPG"
         }
       },
       {
@@ -1708,7 +1858,9 @@
           ]
         },
         "properties": {
-          "title": "Paris, France"
+          "title": "Paris, France",
+          "id": 42,
+          "image": "IMG_1155.jpeg"
         }
       },
       {
@@ -1721,7 +1873,9 @@
           ]
         },
         "properties": {
-          "title": "Paris, France"
+          "title": "Paris, France",
+          "id": 41,
+          "image": "IMG_1149.jpeg"
         }
       },
       {
@@ -1734,7 +1888,9 @@
           ]
         },
         "properties": {
-          "title": "Neuilly-sur-Seine, France"
+          "title": "Neuilly-sur-Seine, France",
+          "id": 40,
+          "image": "IMG_0947.jpeg"
         }
       },
       {
@@ -1747,7 +1903,9 @@
           ]
         },
         "properties": {
-          "title": "Paris, France"
+          "title": "Paris, France",
+          "id": 36,
+          "image": "IMG_0829.jpeg"
         }
       },
       {
@@ -1760,7 +1918,9 @@
           ]
         },
         "properties": {
-          "title": "Paris, France"
+          "title": "Paris, France",
+          "id": 35,
+          "image": "IMG_0819.jpeg"
         }
       },
       {
@@ -1773,7 +1933,9 @@
           ]
         },
         "properties": {
-          "title": "Porte Saint-Denis, France"
+          "title": "Porte Saint-Denis, France",
+          "id": 34,
+          "image": "IMG_0781.jpeg"
         }
       },
       {
@@ -1786,7 +1948,9 @@
           ]
         },
         "properties": {
-          "title": "Paris, France"
+          "title": "Paris, France",
+          "id": 33,
+          "image": "IMG_0717.jpeg"
         }
       },
       {
@@ -1799,7 +1963,9 @@
           ]
         },
         "properties": {
-          "title": "Paris, France"
+          "title": "Paris, France",
+          "id": 32,
+          "image": "IMG_0713.jpeg"
         }
       },
       {
@@ -1812,7 +1978,9 @@
           ]
         },
         "properties": {
-          "title": "Paris, France"
+          "title": "Paris, France",
+          "id": 31,
+          "image": "IMG_0703.jpeg"
         }
       },
       {
@@ -1825,7 +1993,9 @@
           ]
         },
         "properties": {
-          "title": "Folie Méricourt, France"
+          "title": "Folie Méricourt, France",
+          "id": 30,
+          "image": "IMG_0552.jpeg"
         }
       },
       {
@@ -1838,7 +2008,9 @@
           ]
         },
         "properties": {
-          "title": "Paris, France"
+          "title": "Paris, France",
+          "id": 29,
+          "image": "IMG_0546.jpeg"
         }
       },
       {
@@ -1851,7 +2023,9 @@
           ]
         },
         "properties": {
-          "title": "Paris, France"
+          "title": "Paris, France",
+          "id": 28,
+          "image": "IMG_0528.jpeg"
         }
       },
       {
@@ -1864,7 +2038,9 @@
           ]
         },
         "properties": {
-          "title": "Paris, France"
+          "title": "Paris, France",
+          "id": 27,
+          "image": "IMG_0524.jpeg"
         }
       },
       {
@@ -1877,7 +2053,9 @@
           ]
         },
         "properties": {
-          "title": "Neuilly-sur-Seine, France"
+          "title": "Neuilly-sur-Seine, France",
+          "id": 26,
+          "image": "IMG_0516.jpeg"
         }
       },
       {
@@ -1890,7 +2068,9 @@
           ]
         },
         "properties": {
-          "title": "Tubize, Belgium"
+          "title": "Tubize, Belgium",
+          "id": 25,
+          "image": "IMG_0489.jpeg"
         }
       },
       {
@@ -1903,7 +2083,9 @@
           ]
         },
         "properties": {
-          "title": "Brussels, Belgium"
+          "title": "Brussels, Belgium",
+          "id": 24,
+          "image": "IMG_0332.jpeg"
         }
       },
       {
@@ -1916,7 +2098,9 @@
           ]
         },
         "properties": {
-          "title": "Brussels, Belgium"
+          "title": "Brussels, Belgium",
+          "id": 23,
+          "image": "IMG_0328.jpeg"
         }
       },
       {
@@ -1929,7 +2113,9 @@
           ]
         },
         "properties": {
-          "title": "Brussels, Belgium"
+          "title": "Brussels, Belgium",
+          "id": 22,
+          "image": "IMG_0325.jpeg"
         }
       },
       {
@@ -1942,7 +2128,9 @@
           ]
         },
         "properties": {
-          "title": "Brussels, Belgium"
+          "title": "Brussels, Belgium",
+          "id": 21,
+          "image": "IMG_0303.jpeg"
         }
       },
       {
@@ -1955,7 +2143,9 @@
           ]
         },
         "properties": {
-          "title": "Brussels, Belgium"
+          "title": "Brussels, Belgium",
+          "id": 20,
+          "image": "IMG_0287.jpeg"
         }
       },
       {
@@ -1968,7 +2158,9 @@
           ]
         },
         "properties": {
-          "title": "Brussels, Belgium"
+          "title": "Brussels, Belgium",
+          "id": 19,
+          "image": "IMG_0278.jpeg"
         }
       },
       {
@@ -1981,7 +2173,9 @@
           ]
         },
         "properties": {
-          "title": "Brussels, Belgium"
+          "title": "Brussels, Belgium",
+          "id": 18,
+          "image": "IMG_0271.jpeg"
         }
       },
       {
@@ -1994,7 +2188,9 @@
           ]
         },
         "properties": {
-          "title": "Brussels, Belgium"
+          "title": "Brussels, Belgium",
+          "id": 17,
+          "image": "IMG_0262.jpeg"
         }
       },
       {
@@ -2007,7 +2203,9 @@
           ]
         },
         "properties": {
-          "title": "Brussels, Belgium"
+          "title": "Brussels, Belgium",
+          "id": 16,
+          "image": "IMG_0225.jpeg"
         }
       },
       {
@@ -2020,7 +2218,9 @@
           ]
         },
         "properties": {
-          "title": "Rehoboth Beach, Delaware"
+          "title": "Rehoboth Beach, Delaware",
+          "id": 63,
+          "image": "IMG_8654.jpg"
         }
       },
       {
@@ -2033,7 +2233,9 @@
           ]
         },
         "properties": {
-          "title": "Rehoboth Beach, Delaware"
+          "title": "Rehoboth Beach, Delaware",
+          "id": 62,
+          "image": "IMG_8642.jpg"
         }
       },
       {
@@ -2046,7 +2248,9 @@
           ]
         },
         "properties": {
-          "title": "Rochester, New York"
+          "title": "Rochester, New York",
+          "id": 12,
+          "image": "IMG_0009.JPG"
         }
       },
       {
@@ -2059,7 +2263,9 @@
           ]
         },
         "properties": {
-          "title": "Niagara Falls, New York"
+          "title": "Niagara Falls, New York",
+          "id": 11,
+          "image": "IMG_0008.JPG"
         }
       },
       {
@@ -2072,7 +2278,9 @@
           ]
         },
         "properties": {
-          "title": "Watkins Glen, New York"
+          "title": "Watkins Glen, New York",
+          "id": 7,
+          "image": "IMG_0004.JPG"
         }
       },
       {
@@ -2085,7 +2293,9 @@
           ]
         },
         "properties": {
-          "title": "Sylvan Beach, New York"
+          "title": "Sylvan Beach, New York",
+          "id": 5,
+          "image": "IMG_0002.JPG"
         }
       },
       {
@@ -2098,7 +2308,9 @@
           ]
         },
         "properties": {
-          "title": "Buxton, North Carolina"
+          "title": "Buxton, North Carolina",
+          "id": 10,
+          "image": "IMG_0007.JPG"
         }
       },
       {
@@ -2111,7 +2323,9 @@
           ]
         },
         "properties": {
-          "title": "Buxton, North Carolina"
+          "title": "Buxton, North Carolina",
+          "id": 14,
+          "image": "IMG_0011.JPG"
         }
       },
       {
@@ -2124,7 +2338,9 @@
           ]
         },
         "properties": {
-          "title": "Buxton, North Carolina"
+          "title": "Buxton, North Carolina",
+          "id": 4,
+          "image": "IMG_0001.JPG"
         }
       },
       {
@@ -2137,7 +2353,9 @@
           ]
         },
         "properties": {
-          "title": "Buxton, North Carolina"
+          "title": "Buxton, North Carolina",
+          "id": 9,
+          "image": "IMG_0006.JPG"
         }
       },
       {
@@ -2150,7 +2368,9 @@
           ]
         },
         "properties": {
-          "title": "Buxton, North Carolina"
+          "title": "Buxton, North Carolina",
+          "id": 8,
+          "image": "IMG_0005.JPG"
         }
       },
       {
@@ -2163,7 +2383,9 @@
           ]
         },
         "properties": {
-          "title": "Buxton, North Carolina"
+          "title": "Buxton, North Carolina",
+          "id": 13,
+          "image": "IMG_0010.JPG"
         }
       },
       {
@@ -2176,7 +2398,9 @@
           ]
         },
         "properties": {
-          "title": "Buxton, North Carolina"
+          "title": "Buxton, North Carolina",
+          "id": 15,
+          "image": "IMG_0012.JPG"
         }
       },
       {
@@ -2189,7 +2413,9 @@
           ]
         },
         "properties": {
-          "title": "Buxton, North Carolina"
+          "title": "Buxton, North Carolina",
+          "id": 6,
+          "image": "IMG_0003.JPG"
         }
       },
       {
@@ -2202,7 +2428,9 @@
           ]
         },
         "properties": {
-          "title": "Wellsboro, Pennsylvania"
+          "title": "Wellsboro, Pennsylvania",
+          "id": 61,
+          "image": "IMG_5684.jpeg"
         }
       },
       {
@@ -2215,10 +2443,12 @@
           ]
         },
         "properties": {
-          "title": "Wellsboro, Pennsylvania"
+          "title": "Wellsboro, Pennsylvania",
+          "id": 60,
+          "image": "IMG_5682.jpeg"
         }
       }
     ]
   },
-  "distanceTraveled": 36227
+  "distanceTraveled": 63415
 }
